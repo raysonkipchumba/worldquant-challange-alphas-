@@ -1,0 +1,6 @@
+group_neutralize(if_else(inventory_turnover > 1.5 * ts_delay(inventory_turnover, 252), 1.5, 1) * (ts_decay_linear(ts_scale(est_cashflow_op, 252), 120) - ts_decay_linear(ts_scale(est_capex, 252), 120)), market)
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.05	Market	On	Off	Verify	OFF	OFF

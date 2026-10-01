@@ -1,0 +1,10 @@
+signal = group_neutralize(
+    group_rank(ts_zscore(snt_social_volume, 10),subindustry) + group_rank(snt_social_value,subindustry) - group_rank(ts_delta(ts_backfill(close,10), 5), subindustry), 
+    subindustry
+);
+ts_decay_linear(signal,63) * rank(volume*close) + ts_decay_linear(signal, 126) * (1 - rank(volume*close))
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF

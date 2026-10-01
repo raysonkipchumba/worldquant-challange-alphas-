@@ -1,0 +1,9 @@
+cum_rel_return = (1+ts_delay(rel_ret_all,4))*(1+ts_delay(rel_ret_all,3))*(1+ts_delay(rel_ret_all,2))*(1+ts_delay(rel_ret_all,1))*(1+rel_ret_all);
+cum_return = (1+ts_delay(returns,4))*(1+ts_delay(returns,3))*(1+ts_delay(returns,2))*(1+ts_delay(returns,1))*(1+returns);
+ts_backfill(cum_rel_return - cum_return,20)
+
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	3	1	0.06	Subindustry	On	Off	Verify	OFF	OFF

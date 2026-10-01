@@ -1,0 +1,31 @@
+tp=(high+low+close)/3;
+
+n=63;
+
+sma=ts_mean(tp,n);
+
+md=ts_mean(abs(tp-sma),n);
+
+cci=(tp-sma)/(0.015*md);
+
+mean = ts_mean(cci,10);
+
+std = ts_std_dev(cci,10);
+
+x = trade_when(abs(cci-mean)/std>1.2 && rank(volume)>0.3,(rank(-close/vwap))*(1+ts_rank(sales,63)),-1);
+
+group=bucket(rank(cap),range="0.1667,1,0.1667");
+
+alpha=group_zscore(group_neutralize(x^0.2,group),exchange);
+
+beta=hump(alpha,hump=0.001);
+
+e = 2.71828;
+
+power(e, beta)
+
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	3	1	0.09	Industry	On	Off	Verify	OFF	OFF

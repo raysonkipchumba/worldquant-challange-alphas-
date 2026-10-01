@@ -1,0 +1,5 @@
+rank(anl4_cff_flag) - rank(assets/liabilities_curr)
+
+
+nstrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF

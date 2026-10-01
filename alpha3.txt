@@ -1,0 +1,8 @@
+alpha_raw = (rank(eps/last_diff_value(eps,120)))>0.2 || ts_step(30)*volume/ts_sum(volume,90)/85 >2.8 ?rank(-ts_delta(close,3)):-(ts_step(30)*volume/ts_sum(volume,90)/90);
+alpha_neut = group_neutralize(alpha_raw, subindustry);
+trade_when(1, alpha_neut, 0);
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF

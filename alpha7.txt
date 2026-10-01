@@ -1,0 +1,6 @@
+-ts_corr(est_ptp, est_fcf, 20)
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	0	1	0.08	Market	On	Off	Verify	OFF	OFF

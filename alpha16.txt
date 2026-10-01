@@ -1,0 +1,22 @@
+rmf=((high+low+close)/3)*volume;
+
+days=5;
+
+pmf=ts_sum(rmf-ts_delay(rmf,1)>0?rmf-ts_delay(rmf,1):0,days);
+
+nmf=ts_sum(rmf-ts_delay(rmf,1)<0?-rmf+ts_delay(rmf,1):0,days);
+
+mfr=pmf/(pmf+nmf);
+
+mfi=100 - 100/(1+mfr);
+
+alpha = (-rank(rank((mfi-50)*adv20*ts_zscore(operating_income/cap,252))*rank(vwap*(close-ts_sum(close,days)/days))));
+
+alpha
+
+
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF

@@ -1,0 +1,7 @@
+-ts_std_dev(scl12_buzz,15)*(1+group_rank(ts_zscore(cap,10),market))
+
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	5	1	0.06	Subindustry	On	Off	Verify	OFF	OFF

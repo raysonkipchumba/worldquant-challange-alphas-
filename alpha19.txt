@@ -1,0 +1,9 @@
+signal=ts_regression(ts_sum(ts_backfill(fnd6_newqv1300_ivltq,60),252),ts_step(1),756,rettype = 2)*(group_rank(fnd6_newqv1300_revtq,market));
+ts_decay_linear(signal,5) * rank(volume*close) + ts_decay_linear(signal, 10) * (1 - rank(volume*close))
+
+
+
+
+Simulation Settings
+Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
+Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF
