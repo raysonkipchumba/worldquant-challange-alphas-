@@ -28,5 +28,3 @@ All listed alphas use **Equity** instruments, the **USA** region, the **TOP3000*
 | [alpha17](alpha17.txt) | 4 | 1 | 0.08 | Subindustry | On | Off | Verify | OFF | OFF |
 | [alpha18](alpha18.txt) | 5 | 1 | 0.06 | Subindustry | On | Off | Verify | OFF | OFF |
 | [alpha19](alpha19.txt) | 4 | 1 | 0.08 | Subindustry | On | Off | Verify | OFF | OFF |
-
-There is no `alpha12.txt` in the supplied files. The settings table uses consistent headings; the source heading in `alpha2.txt` is incomplete (`nstrument Type`) and has not been changed.
