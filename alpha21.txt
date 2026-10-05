@@ -1,0 +1,28 @@
+
+signal=group_neutralize(
+    rank(
+        -ts_delta(ts_backfill(fn_liab_fair_val_l1_a,63), 63)-ts_delta(ts_backfill(  fn_liab_fair_val_l1_a,63), 21)
+    ),
+    sector
+);
+ts_decay_linear(signal,5) * rank(volume*close) + ts_decay_linear(signal, 10) * (1 - rank(volume*close))
+
+
+
+/*simulation settings
+
+```
+Instrument Type : Equity
+Region          : USA
+Universe        : TOP3000
+Language        : Fast Expression
+Decay           : 4
+Delay           : 1
+Truncation      : 0.08
+Neutralization  : Subindustry
+Pasteurization  : On
+NaN Handling    : Off
+Unit Handling   : Off
+
+```
+*/

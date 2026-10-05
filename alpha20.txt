@@ -1,0 +1,21 @@
+signal = ts_backfill(vec_avg(nws12_prez_4l), 504);
+group = densify(bucket(rank(cap), range = "0.1667, 1, 0.1667"));
+group_rank(signal, group) * (1 - group_rank(ts_delta(close, 3), group)) * group_rank(volume*close, group);
+
+
+
+/*```
+Region: USA
+Universe: TOP3000
+Language: Fast Expression
+Decay: 4
+Delay: 1
+Truncation: 0.08
+Neutralization: Subindustry
+Pasteurization: On
+NaN Handling: Off
+Unit Handling: Verify
+Max Trade: OFF
+Max Position: OFF
+
+```  */
