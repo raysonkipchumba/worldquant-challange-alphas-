@@ -2,6 +2,32 @@
 
 
 
-Simulation Settings
-Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity	USA	TOP3000	Fast Expression	5	1	0.06	Subindustry	On	Off	Verify	OFF	OFF
+/*
+**Simulation Settings**
+
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 5
+
+Delay: 1
+
+Truncation: 0.06
+
+Neutralization: Subindustry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/

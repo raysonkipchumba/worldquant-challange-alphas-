@@ -1,6 +1,32 @@
 group_neutralize(ts_rank(operating_income / cap, 252), subindustry)
 
 
-settings
-Instrument Type 	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity   	USA	TOP3000	Fast Expression	0	1	0.08	Subindustry	On	Off	Verify	OFF	OFF
+/*
+**Simulation Settings**
+
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 0
+
+Delay: 1
+
+Truncation: 0.08
+
+Neutralization: Subindustry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/

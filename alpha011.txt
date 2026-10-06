@@ -4,7 +4,32 @@ Hypothesis: Options market volatility skew (Call IV vs. Put IV) reflects informe
 
 trade_when(pcr_oi_270 < 1, group_neutralize(ts_decay_linear(implied_volatility_call_270 - implied_volatility_put_270, 6), bucket(rank(historical_volatility_20), range="0, 1, 0.1")), -1)
 
+/*
+**Simulation Settings**
 
-Simulation Settings
-Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity	USA	TOP3000	Fast Expression	0	1	0.01	None	On	Off	Verify	OFF	OFF
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 0
+
+Delay: 1
+
+Truncation: 0.01
+
+Neutralization: None
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/

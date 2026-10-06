@@ -15,8 +15,32 @@ alpha = (-rank(rank((mfi-50)*adv20*ts_zscore(operating_income/cap,252))*rank(vwa
 alpha
 
 
+/*
+**Simulation Settings**
 
+Instrument Type: Equity
 
-Simulation Settings
-Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 4
+
+Delay: 1
+
+Truncation: 0.08
+
+Neutralization: Subindustry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/

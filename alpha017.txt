@@ -1,6 +1,31 @@
 -ts_backfill(zscore(goodwill/sales),65)*(rank(fn_accrued_liab_a)+rank(ts_backfill(capex, 5)))
 
+/*
+**Simulation Settings**
 
-Simulation Settings
-Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity	USA	TOP3000	Fast Expression	4	1	0.08	Subindustry	On	Off	Verify	OFF	OFF
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 4
+
+Delay: 1
+
+Truncation: 0.08
+
+Neutralization: Subindustry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/

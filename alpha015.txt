@@ -11,6 +11,33 @@ group = densify(bucket(rank(cap), range = "0,1,0.1667"));
 group_neutralize(group_rank(0.5*rank(-returns)+0.5*rank(AB_NR), group), exchange)
 
 
-Simulation Settings
-Instrument Type	Region	Universe	Language	Decay	Delay	Truncation	Neutralization	Pasteurization	NaN Handling	Unit Handling	Max Trade	Max Position
-Equity	USA	TOP3000	Fast Expression	6	1	0.02	Industry	On	Off	Verify	OFF	OFF
+/*
+**Simulation Settings**
+
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 6
+
+Delay: 1
+
+Truncation: 0.02
+
+Neutralization: Industry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+
+*/
