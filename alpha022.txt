@@ -1,1 +1,38 @@
 
+-ts_backfill(zscore(ts_backfill(goodwill,80)/ts_backfill(sales,80)),65)*(rank(ts_backfill(fn_accrued_liab_a,80))*rank(ts_backfill(capex,80))*rank(ts_backfill(dividend/sharesout,80))+rank(ts_backfill(debt_st,80)))
+
+
+
+
+/**Simulation Settings**
+
+Language: Fast Expression
+
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Delay: 1
+
+Neutralization: Market
+
+Decay: 0
+
+Truncation: 0.08
+
+Pasteurization: On
+
+Unit Handling: Verify
+
+Nan Handling: Off
+
+---
+
+**Test Period**
+
+Years: 5
+
+Months: 0
+*/

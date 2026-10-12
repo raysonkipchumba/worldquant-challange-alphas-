@@ -1,0 +1,35 @@
+avg_news = vec_avg(nws12_afterhsz_sl);
+
+alpha=rank(ts_sum(avg_news, 504)) > 0.5 ? 1 : rank(-ts_delta(close, 3));
+
+beta=signed_power(alpha-0.5,5);
+
+/*
+**Simulation Settings**
+
+Instrument Type: Equity
+
+Region: USA
+
+Universe: TOP3000
+
+Language: Fast Expression
+
+Decay: 4
+
+Delay: 1
+
+Truncation: 0.08
+
+Neutralization: Subindustry
+
+Pasteurization: On
+
+NaN Handling: Off
+
+Unit Handling: Verify
+
+Max Trade: OFF
+
+Max Position: OFF
+*/
